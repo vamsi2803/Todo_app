@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-3 bg-light p-5 rounded">
+<h2>Update Todo</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{ todo.title }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="desc" class="form-label">Description</label>
+        <input type="text" class="form-control" id="desc" name="desc" value="{{ todo.desc }}" required>
+    </div>
+    <button type="submit" class="btn btn-dark">Update</button>
+</form>
+</div>
+{% endblock %}
